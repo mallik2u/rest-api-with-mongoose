@@ -10,12 +10,10 @@ const accountSchema = Schema({
     balance: Number
 })
 let Account = mongoose.model('Account', accountSchema, 'Accounts')
-let ObjectId = mongoose.Schema.Types.ObjectId
 
 mongoose.connection.on('connected', function () {
     console.log('Connected to MongoDB')
 });
-
 
 mongoose.connection.on('disconnected', function () {
     console.log('Mongodb disconnected');
